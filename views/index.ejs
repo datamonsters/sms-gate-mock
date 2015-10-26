@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phones</title>
+  </head>
+  <body>
+  	<table>
+  		<thead>
+  		</thead>
+  		<tr>
+  			<td>
+  				Телефон
+  			</td>
+  			<td>
+  				Тест сообщения
+  			</td>
+  			<td>Время отправки</td>
+  		</tr>
+  		<tbody>
+			<% for(var phone in phones) {%>
+			   <tr>
+					<td><%= phone %></td>
+					<td><%= phones[phone].text %></td>
+					<td><%= new Date(phones[phone].time) %></td>
+			   </tr>
+			<% } %>
+		</tbody>
+  	</table>
+  </body>
+</html>
