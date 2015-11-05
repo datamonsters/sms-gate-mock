@@ -27,7 +27,7 @@ Text: `Argument doesn't exist: text`
 	- phone
 
 - Results:
-	- Correct:
+	- Phone was asked:
 
 	Status code: `200`
 	Text: 
@@ -38,14 +38,21 @@ Text: `Argument doesn't exist: text`
 	}
 	```
 
-	- Incorrect request (no `phone` parameter)
-	Status code: `400`
-	Text: 
+	- Phone wasn't asked:
+
+	Status code: `404`
+	Text:
 	```json
 	{
 		"error": "phone doesn't asked"
 	}
 	```
+
+	- Incorrect request (no `phone` parameter)
+	Status code: `400`
+	Text:  `Query parameter doesn't exist: phone`
+
+
 
 ## Production
 
