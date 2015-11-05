@@ -21,7 +21,7 @@ var SmsServer = function() {
 		if (phoneNote) {
 			return {
 				text: phoneNote.text,
-				time: phoneNote.time
+				time: phoneNote.time.toString()
 			}
     }
 
