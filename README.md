@@ -59,7 +59,7 @@ Text: `Argument doesn't exist: text`
 Run
 
 ```bash
-PORT=8090 node bin/www
+DEBUG=* PORT=8090 node bin/www
 ```
 
 ## Development
