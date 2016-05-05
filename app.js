@@ -22,6 +22,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// add possibility to send ajax requests from other domains to this server
+app.use(function(req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  return next();
+});
+
 app.use('/', routes);
 app.use('/sms', smsServer);
 
