@@ -17,13 +17,13 @@
   			<td>Время отправки</td>
   		</tr>
   		<tbody>
-			<% for(var phone in phones) {%>
+			<% phones.map(function(phone){ %>
 			   <tr>
-					<td><%= phone %></td>
-					<td><%= phones[phone].text %></td>
-					<td><%= new Date(phones[phone].time) %></td>
+					<td><%= phone.phone %></td>
+					<td><%= phone.text %></td>
+					<td><%= new Date(phone.time) %></td>
 			   </tr>
-			<% } %>
+			<% }); %>
 		</tbody>
   	</table>
   </body>
